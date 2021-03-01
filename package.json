@@ -1,6 +1,10 @@
 {
   "name": "image-compressor",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x"
+  },
   "private": true,
   "dependencies": {
     "@babel/runtime": "^7.13.8",
