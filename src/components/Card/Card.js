@@ -70,7 +70,9 @@ export default function Card() {
   return (
     <div className="App">
       <div className="compressor">
-        <div className="compressor-title">Compressor</div>
+        <div className="compressor-title">
+          Compressor <div className="card-icon"></div>
+        </div>
 
         <div
           {...getRootProps({ className: `dropzone ${dropzone}` })}

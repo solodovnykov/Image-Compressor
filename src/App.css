@@ -1,5 +1,4 @@
 .App {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,6 +56,9 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 300px;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .img-zone {
@@ -98,7 +100,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  background: #b2afb6;
+  background: #C4C4C4;
   margin-top: -8px;
   cursor: pointer;
   /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
@@ -109,7 +111,8 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 2px;
   cursor: pointer;
-  background: #aaa9b9;
+  background: #868686;
+  border-radius: 1px;
 }
 
 .compress-progress {
@@ -160,4 +163,15 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #4a5158;
   transition: all 0.2s ease-in-out;
+}
+
+@media (max-width: 875px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .green1, .green2 {
+    width: 200px;
+  }
 }

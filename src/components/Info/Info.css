@@ -49,3 +49,20 @@
   background-position: center;
   margin-left: 15px;
 }
+
+@media (max-width: 875px) {
+  .info {
+    margin-top: 50px;
+    max-width: 400px;
+    display: none;
+  }
+  .info-title {
+    font-size: 28px;
+  }
+  .info-subtitle {
+    font-size: 14px;
+  }
+  .info-text {
+    font-size: 14px;
+  }
+}
