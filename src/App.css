@@ -91,11 +91,6 @@ input[type=range]::-webkit-slider-runnable-track {
   background: rgb(59, 190, 66);
 }
 
-.dropzone.dragover {
-  border-color: #000;
-  color: #000;
-}
-
 .green1 {
   width: 800px;
   height: 460px;

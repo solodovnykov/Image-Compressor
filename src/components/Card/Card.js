@@ -7,12 +7,6 @@ import { useDropzone } from "react-dropzone";
 export default function Card() {
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
 
-  const files = acceptedFiles.map((file) => (
-    <li key={file.path}>
-      {file.path} - {file.size} bytes
-    </li>
-  ));
-
   const [originalImage, setOriginalImage] = useState("");
   const [originalImageFile, setOriginalImageFile] = useState("");
   const [compressImage, setCompressImage] = useState("");
@@ -22,21 +16,26 @@ export default function Card() {
   const [dropzone, setDropzone] = useState("");
 
   useEffect(() => {
+    setTimeout(() => {
+      if (acceptedFiles[0]) {
+        let img = new Image();
+        img.src = originalImageFile;
+        setImageSize(img.width);
+        console.log(img.width);
+      }
+    }, 160);
+  }, [originalImage]);
+
+  useEffect(() => {
     setOriginalImage(acceptedFiles[0]);
     if (acceptedFiles[0]) {
       setOriginalImageFile(URL.createObjectURL(acceptedFiles[0]));
       setFileName(acceptedFiles[0].name);
+      setDropzone("");
+      setCompressProgress(0);
+      setCompressImage("");
     }
-    console.log(files);
   }, [acceptedFiles]);
-
-  const handler = (e) => {
-    const imageFile = e.target.files[0];
-    setOriginalImage(imageFile);
-    setOriginalImageFile(URL.createObjectURL(imageFile));
-    setFileName(imageFile.name);
-    // console.log(URL.createObjectURL(imageFile));
-  };
 
   const compressImageHandler = (e) => {
     e.preventDefault();
@@ -62,17 +61,30 @@ export default function Card() {
     });
   };
 
+  const setDefaultImgSizeHandler = () => {
+    let img = new Image();
+    img.src = originalImageFile;
+    setImageSize(img.width);
+  };
+
   return (
     <div className="App">
       <div className="compressor">
         <div className="compressor-title">Compressor</div>
 
-        <div {...getRootProps({ className: "dropzone" })}>
+        <div
+          {...getRootProps({ className: `dropzone ${dropzone}` })}
+          onDragOver={() => setDropzone("dragover")}
+          onDragLeave={() => setDropzone("")}
+        >
           <input {...getInputProps()} />
           Drag 'n' drop some files here
         </div>
         {originalImageFile ? (
-          <img src={originalImageFile} className="original-img" />
+          <div
+            style={{ backgroundImage: `url(${originalImageFile})` }}
+            className="original-img"
+          />
         ) : (
           <div className="compressor-original-img"></div>
         )}
@@ -101,12 +113,20 @@ export default function Card() {
               value={imageSize}
               onChange={(e) => setImageSize(e.target.value)}
             ></input>
-            <input
-              className="max-size"
-              type="text"
-              value={`${imageSize} px`}
-              onChange={(e) => setImageSize(e.target.value)}
-            />
+            <div className="image-prop">
+              <input
+                className="max-size"
+                type="text"
+                value={`${imageSize} px`}
+                onChange={(e) => setImageSize(e.target.value)}
+              />
+              <button
+                onClick={() => setDefaultImgSizeHandler()}
+                className="default-btn"
+              >
+                Default
+              </button>
+            </div>
           </>
         ) : (
           ""

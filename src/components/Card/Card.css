@@ -30,13 +30,12 @@
 .compressor-original-img {
   width: 100%;
   height: 200px;
-  border: 2px dashed #868686;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  background-image: url('../../img/imageIcon.png');
+  background-image: url('../../img/Arrow.png');
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -81,8 +80,14 @@
   margin-top: 20px;
 }
 
-.max-size {
+.image-prop {
+  display: flex;
+  flex-direction: row;
   margin-top: 15px;
+  justify-content: space-between;
+}
+
+.max-size {
   max-width: 70px;
   height: 25px;
   background: #7C7C7C;
@@ -93,6 +98,18 @@
   color: #D1D1D1;
   font-size: 14px;
   text-align: center;
+}
+
+.default-btn {
+  max-width: 70px;
+  width: 100%;
+  background: #7C7C7C;
+  border: 1px solid #868686;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  color: #D1D1D1;
+  cursor: pointer;
 }
 
 .compress-btn {
@@ -161,4 +178,9 @@
   height: 1px;
   background: #868686;
   margin-top: 20px;
+}
+
+.dropzone.dragover {
+  border-color: #fff;
+  color: #fff;
 }
