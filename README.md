@@ -1,3 +1,3 @@
 # Image Compressor
 
-![](readme-img.png)
+![](ImageCompressorApp.png)
