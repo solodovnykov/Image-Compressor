@@ -80,7 +80,7 @@ export default function Card() {
           onDragLeave={() => setDropzone("")}
         >
           <input {...getInputProps()} />
-          Drag 'n' drop some files here
+          Drag files here or click
         </div>
         {originalImageFile ? (
           <div
