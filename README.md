@@ -1,5 +1,3 @@
-# Image Compressor
-
-## [Demo](https://simple-img-compressor.herokuapp.com)
+# Image Compressor [Demo](https://simple-img-compressor.herokuapp.com)
 
 ![](ImageCompressorApp.png)
