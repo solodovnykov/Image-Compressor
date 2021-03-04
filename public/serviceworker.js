@@ -16,13 +16,7 @@ const urlsToCache = [
   "./static/media/gothic.b194aa2b.ttf",
   "./images/logo.png",
   "./manifest.json",
-  "./images/icon-192x192.png",
-  "./static/js/bundle.js.map",
-  "./static/js/main.chunk.js.map",
-  "./static/js/vendors~main.chunk.js.map",
-  "./static/js/bundle.js.map",
-  "./static/js/main.chunk.js.map",
-  "./vendors~main.chunk.js.map"
+  "./images/icon-192x192.png"
 ];
 
 const self = this;
