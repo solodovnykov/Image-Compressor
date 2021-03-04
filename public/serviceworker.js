@@ -6,6 +6,7 @@ const urlsToCache = [
   "/static/js/bundle.js",
   "/static/js/vendors~main.chunk.js",
   "/static/js/main.chunk.js",
+  "/static/js/0.chunk.js",
   "/static/js/3.chunk.js",
   "/static/js/1.chunk.js",
   "/static/js/2.chunk.js",
@@ -16,6 +17,12 @@ const urlsToCache = [
   "/images/logo.png",
   "/manifest.json",
   "/images/icon-192x192.png",
+  "/static/js/bundle.js.map",
+  "/static/js/main.chunk.js.map",
+  "/static/js/vendors~main.chunk.js.map",
+  "/static/js/bundle.js.map",
+  "/static/js/main.chunk.js.map",
+  "/vendors~main.chunk.js.map"
 ];
 
 const self = this;
