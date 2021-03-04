@@ -1,5 +1,22 @@
 const CACHE_NAME = "version-1";
-const urlsToCache = ["/index.html", "/offline.html"];
+const urlsToCache = [
+  "/",
+  "/index.html",
+  "/offline.html",
+  "/static/js/bundle.js",
+  "/static/js/vendors~main.chunk.js",
+  "/static/js/main.chunk.js",
+  "/static/js/3.chunk.js",
+  "/static/js/1.chunk.js",
+  "/static/js/2.chunk.js",
+  "/static/media/bgImg1.9784f425.png",
+  "/static/media/bgImg2.2f2b81e9.png",
+  "/static/media/Noise.bc8c1f21.png",
+  "/static/media/gothic.b194aa2b.ttf",
+  "/images/logo.png",
+  "/manifest.json",
+  "/images/icon-192x192.png",
+];
 
 const self = this;
 
@@ -17,8 +34,8 @@ self.addEventListener("install", (event) => {
 // Listen for requests
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then(() => {
-      return fetch(event.request).catch(() => caches.match("offline.html"));
+    caches.match(event.request).then((cacheRes) => {
+      return cacheRes || fetch(event.request);
     })
   );
 });

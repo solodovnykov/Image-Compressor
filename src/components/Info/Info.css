@@ -11,7 +11,7 @@
 }
 
 .info-title {
-  font-family: Century Gothic;
+  font-family: Century Gothic, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 38px;
@@ -22,7 +22,7 @@
 }
 
 .info-subtitle {
-  font-family: Century Gothic;
+  font-family: Century Gothic, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -32,7 +32,7 @@
 }
 
 .info-text {
-  font-family: Century Gothic;
+  font-family: Century Gothic, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

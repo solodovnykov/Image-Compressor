@@ -24,7 +24,7 @@ export default function Card() {
         console.log(img.width);
       }
     }, 160);
-  }, [originalImage]);
+  }, [originalImage, acceptedFiles, originalImageFile]);
 
   useEffect(() => {
     setOriginalImage(acceptedFiles[0]);

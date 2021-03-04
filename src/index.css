@@ -13,4 +13,5 @@ code {
 @font-face {
   font-family: 'Century Gothic';
   src: local('Century Gothic'), url(./fonts/gothic.ttf) format('truetype');
+  font-display: swap;
 }
