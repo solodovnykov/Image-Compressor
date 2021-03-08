@@ -16,9 +16,10 @@
   font-weight: bold;
   font-size: 38px;
   line-height: 47px;
-  color: #E5E5E5;
+  color: var(--color-text-main);
   white-space: nowrap;
   display: flex;
+  transition: .15s all ease-in-out;
 }
 
 .info-subtitle {
@@ -27,8 +28,9 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
-  color: #E5E5E5;
+  color: var(--color-text-main);
   margin-top: 25px;
+  transition: .15s all ease-in-out;
 }
 
 .info-text {
@@ -37,8 +39,9 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 20px;
-  color: #E5E5E5;
+  color: var(--color-text-main);
   margin-top: 20px;
+  transition: .15s all ease-in-out;
 }
 
 .info-icon {

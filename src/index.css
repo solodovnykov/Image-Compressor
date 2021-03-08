@@ -1,9 +1,10 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background: #585858;
+  background: var(--color-bg-page);
   color: #E5E5E5;
   height: 100%;
+  transition: .15s all ease-in-out;
 }
 
 code {
@@ -14,4 +15,15 @@ code {
   font-family: 'Century Gothic';
   src: local('Century Gothic'), url(./fonts/gothic.ttf) format('truetype');
   font-display: swap;
+}
+
+:root {
+  --color-bg-page: #585858;
+  --color-text-main: #E5E5E5;
+  --color-bg-card: #727272;
+}
+:root[data-theme='light'] {
+  --color-bg-page: #F3F3F3;
+  --color-text-main: #404040;
+  --color-bg-card: #DCDCDC;
 }

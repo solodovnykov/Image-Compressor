@@ -1,0 +1,19 @@
+.theme-switch {
+    width: 50px;
+    height: 25px;
+    background: #91DB7F;
+    border-radius: 18px;
+    padding: 2px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.theme-switch-item {
+    width: 21px;
+    height: 21px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .15s all ease-in-out;
+    
+}
