@@ -5,6 +5,8 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 
 function App() {
+  let darkMode = localStorage.getItem('darkMode');
+  
   return (
     <HttpsRedirect>
       <div id='main' className="main">
