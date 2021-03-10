@@ -21,7 +21,7 @@ export default function Header() {
   if (theme === lightTheme || theme === darkTheme) {
     root.classList.add(theme);
   } else {
-    root.classList.add(lightTheme);
+    root.classList.add(darkTheme);
   }
 
   const switchTheme = (e) => {
