@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: flex-end;
 }
-.theme-switch {
+#theme-switch {
   width: 50px;
   height: 25px;
   background: #91db7f;
@@ -16,13 +16,19 @@
   outline: none;
   cursor: pointer;
   position: relative;
-  
 }
 .theme-switch-item {
   width: 21px;
   height: 21px;
   background: #fff;
   border-radius: 50%;
+}
+.darkTheme .theme-switch-item {
   transform: translateX(25px);
+  transition: 0.15s all ease-in-out;
+}
+
+.lightTheme .theme-switch-item {
+  transform: translateX(0);
   transition: 0.15s all ease-in-out;
 }

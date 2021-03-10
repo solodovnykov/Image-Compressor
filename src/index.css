@@ -22,7 +22,7 @@ code {
   --color-text-main: #E5E5E5;
   --color-bg-card: #727272;
 }
-:root[data-theme='light'] {
+:root[class='light'] {
   --color-bg-page: #F3F3F3;
   --color-text-main: #404040;
   --color-bg-card: #DCDCDC;

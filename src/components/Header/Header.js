@@ -2,40 +2,48 @@ import React, { useEffect, useState } from "react";
 import "./Header.css";
 
 export default function Header() {
-  let darkMode = localStorage.getItem("darkMode");
+  const root = document.documentElement;
+  setTimeout(() => {
+    const btn = document.getElementById("theme-switch");
+    if (theme === "dark") {
+      btn.classList.add("darkTheme");
+    } else {
+      btn.classList.add("lightTheme");
+    }
+  }, 1);
+  const lightTheme = "light";
+  const darkTheme = "dark";
+  let theme;
 
-  const enableDarkMode = () => {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("darkMode", "enabled");
-    const switchBtn = document.getElementById("switch");
-    switchBtn.style.transform = "translateX(25px)";
-  };
-  const disableDarkMode = () => {
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("darkMode", null);
-    const switchBtn = document.getElementById("switch");
-    switchBtn.style.transform = "translateX(0)";
-  };
-  if (darkMode === "enabled") {
-    enableDarkMode();
+  if (localStorage) {
+    theme = localStorage.getItem("theme");
+  }
+  if (theme === lightTheme || theme === darkTheme) {
+    root.classList.add(theme);
+  } else {
+    root.classList.add(lightTheme);
   }
 
-  const handler = () => {
-    darkMode = localStorage.getItem("darkMode");
+  const switchTheme = (e) => {
+    const btn = document.getElementById("theme-switch");
+    if (theme === darkTheme) {
+      root.classList.replace(darkTheme, lightTheme);
 
-    // if it not current enabled, enable it
-    if (darkMode !== "enabled") {
-      enableDarkMode();
-      // if it has been enabled, turn it off
+      localStorage.setItem("theme", "light");
+      theme = lightTheme;
+      btn.classList.replace("darkTheme", "lightTheme");
     } else {
-      disableDarkMode();
+      root.classList.replace(lightTheme, darkTheme);
+      localStorage.setItem("theme", "dark");
+      theme = darkTheme;
+      btn.classList.replace("lightTheme", "darkTheme");
     }
   };
 
   return (
     <div className="header">
-      <button onClick={() => handler()} className="theme-switch">
-        <div id="switch" className="theme-switch-item"></div>
+      <button id="theme-switch" onClick={(e) => switchTheme(e)}>
+        <div className="theme-switch-item"></div>
       </button>
     </div>
   );
