@@ -9,7 +9,7 @@
 #theme-switch {
   width: 50px;
   height: 25px;
-  background: #91db7f;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
   border-radius: 18px;
   padding: 2px;
   box-sizing: border-box;
@@ -23,6 +23,7 @@
   height: 21px;
   background: #fff;
   border-radius: 50%;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
 }
 .darkTheme .theme-switch-item {
   transform: translateX(25px);
@@ -31,5 +32,13 @@
 
 .lightTheme .theme-switch-item {
   transform: translateX(0);
+  transition: 0.15s all ease-in-out;
+}
+.lightTheme {
+  background: #e1e1e1;
+  transition: 0.15s all ease-in-out;
+}
+.darkTheme {
+  background: #91db7f;
   transition: 0.15s all ease-in-out;
 }
