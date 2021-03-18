@@ -1,0 +1,13 @@
+.info-loader {
+  margin-top: 150px;
+}
+.skeleton {
+  max-width: 400px;
+  width: 100%;
+}
+
+@media (max-width: 875px) {
+  .info-loader {
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+.card-loader {
+  margin-top: 150px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+.card-loader-body {
+  margin-top: 20px;
+}
+.card-loader-title {
+    margin: 0;
+}
+.card-loader-footer {
+    margin-top: 20px;
+}
+@media (max-width: 875px) {
+    .card-loader {
+      padding: 0;
+      margin: 30px auto 0 ;
+    }
+    .card-loader  div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+  }
